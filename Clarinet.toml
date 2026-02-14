@@ -1,0 +1,24 @@
+[project]
+name = "gameasset"
+authors = []
+description = "Dynamic In-Game Assets on Stacks with Upgradeable Stats"
+telemetry = false
+requirements = []
+boot_contracts = ["pox", "costs-v2", "bns"]
+
+[contracts.game-item]
+path = "contracts/game-item.clar"
+depends_on = []
+
+[repl]
+costs_version = 2
+parser_version = 2
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
